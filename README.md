@@ -16,9 +16,9 @@ The ST_API library provides the following functionality:
     7. Send arbitrary json command
 
 To install the library:
-    1. Download the ST_API.zip file from my GitHub
-    2. In the Arduino IDE, select Sketches Menu->Manage Libraries ->Import Library from zip file and select the downloaded library
-    3. Restart the IDE
+1. Download the ST_API.zip file from my GitHub
+2. In the Arduino IDE, select Sketches Menu->Manage Libraries ->Import Library from zip file and select the downloaded library
+3. Restart the IDE
 
 The library should work with any microcontroller that supports SSL clients and has sufficient memory. The example sketches have been successfully used with both ESP32 and MKR WiFi 1010 and have complied with several other Arduino microcontrollers
 

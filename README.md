@@ -1,5 +1,5 @@
 # ST_API
-Arduino Library for Interacting with SmartThings API
+Arduino IDE Library for interacting with SmartThings API
 
 The ST_API library provides the following functionality:
 1. Execute a Rule
@@ -31,13 +31,12 @@ yourJSONvariable {R”(your-unescaped-minified-json-command)”};
 
 Device json commands can have imbedded placeholders variables that can be changed during  program execution using snprintf. See ST_RawJSON_Command sketch for an example.
 
-There are four levels for logging information to the serial monitor. Log level 1 shows both the request json sent to ST and the response json received from ST. The response json is helpful in determining key needed  to extract data out of the response using the Capvalue() function for use by the sketch. Log level 2 and 3 logs various levels of the response header information. Log level 0 logs only the response code received from ST.
+There are four levels for logging information to the serial monitor. Log level 1 shows both the request json sent to ST and the response json received from ST. The response json is helpful in determining key needed to extract data out of the response using the Capvalue() function fwhich can then be used by the sketch. Log level 2 and 3 logs various levels of the response header information. Log level 0 logs only the response code received from ST.
 
 Limitations:
 The SmartThing API takes 2-3 seconds per request (most the time is waiting for SmartThing API to send the response). Checking the device online state before making a device request (which is disabled by default) doubles the time.
 
-Requesting device status from an offline device will succeed with stale device status/information. There is no indication that the device was offline, hence the need to check the online state to insure latest device status/information since separate requests are needed to determine the online state and then send the device request
+Requesting device status from an offline device will succeed with stale device status/information. There is no indication that the device is offline, hence the need to check the online state to insure latest device status/information. Separate requests are needed to determine the online state and then send the device status request
 
 This library uses the ST http client/server API for interactions. The  microcontroller must send  an appropriate request to the ST platform in order to get a response from ST.
-
 
